@@ -13,6 +13,7 @@ var bot = new Discord.Client({
 const Tesseract = require("tesseract.js"); // Initializing Tesseract, this module is essential for OCR
 console.log("---bot initialized---")
 bot.on("ready", () => {
+  console.log("初始化。。。   将大翻译运动进行到底！！");
   console.log(`Logged in as ${bot.user.tag}!`);
 });
 
