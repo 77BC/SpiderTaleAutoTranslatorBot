@@ -1,14 +1,12 @@
-
 const Discord = require("discord.js");
-var auth = require("./auth.json");
 var translate = require("translate");
 require("discord-reply"); // Initializing Discord-Reply
 
 translate.engine = "deepl"; // Or "yandex", "libre", "deepl"
-translate.key = auth.DeepLToken;
+translate.key = process.env.DeepLToken;
 
 var bot = new Discord.Client({
-    token: auth.discordToken,
+    token: process.env.discordToken,
     autorun: true
 });
 
@@ -46,4 +44,4 @@ bot.on("message", (msg) => {
   }
 });
 
-bot.login(auth.discordToken);
+bot.login(process.env.discordToken);
