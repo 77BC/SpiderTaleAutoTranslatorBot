@@ -1,4 +1,8 @@
 {
+  "main": "SpiderTaleAutoTranslatorBot.js",
+  "scripts": {
+    "start": "node SpiderTaleAutoTranslatorBot"
+  },
   "dependencies": {
     "discord-reply": "^0.1.2",
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
