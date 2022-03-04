@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const Discord = require("discord.js");
 var translate = require("translate");
 require("discord-reply"); // Initializing Discord-Reply
