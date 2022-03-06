@@ -17,21 +17,11 @@ var bot = new Discord.Client({
 const { Tesseract } = require("tesseract.js"); // Initializing Tesseract, this module is essential for OCR
 const scheduler = createScheduler();
 const worker1 = createWorker();
-const worker2 = createWorker();
-const worker3 = createWorker();
 (async () => {
     await worker1.load();
-    await worker2.load();
-    await worker3.load();
     await worker1.loadLanguage("chi_sim");
-    await worker2.loadLanguage("chi_sim");
-    await worker3.loadLanguage("chi_sim");
     await worker1.initialize("chi_sim");
-    await worker2.initialize("chi_sim");
-    await worker3.initialize("chi_sim");
     scheduler.addWorker(worker1);
-    scheduler.addWorker(worker2);
-    scheduler.addWorker(worker3);
     console.log("finished worker initialization");
 })();
 
